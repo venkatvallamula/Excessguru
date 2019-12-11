@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.InsuranceListFragment">
 
    <com.google.android.material.tabs.TabLayout
@@ -10,7 +11,11 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:background="?attr/colorPrimary"
+       app:tabBackground="@drawable/tabselect_color"
        android:elevation="6dp"
+       app:tabSelectedTextColor="@color/white"
+       app:tabTextColor="@color/unselect_tab_color"
+       app:tabIndicatorColor="@color/select_tab_color"
        android:minHeight="?attr/actionBarSize"
        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
    <androidx.viewpager.widget.ViewPager

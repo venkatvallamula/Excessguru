@@ -16,49 +16,59 @@
         card_view:cardBackgroundColor="#fff"
         card_view:cardCornerRadius="10dp"
         card_view:cardElevation="5dp"
+        android:layout_gravity="center"
         card_view:cardUseCompatPadding="true"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_gravity="center"
             android:orientation="horizontal"
             >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="0.5">
+            android:padding="10dp"
+            android:layout_weight="0.55">
             <TextView
                 android:id="@+id/tvTripType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/item_color"
                 android:textSize="16dp"
-                android:text="insura"
+                android:text=""
                 android:gravity="center|left"
-                android:textStyle="bold" />
+                 />
             <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/red"
                 android:textSize="16dp"
-                android:text="insura"
+                android:text=""
                 android:gravity="center|left"
                 android:textStyle="bold" />
         </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:layout_gravity="center">
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnBuyNow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="16dp"
                 android:text="BUY NOW"
                 android:gravity="center|left"
-                android:layout_weight="0.5"
-                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/background_buy_now_red"
                 android:drawableRight="@drawable/right_arrow" />
+        </LinearLayout>
         </LinearLayout>
 
 

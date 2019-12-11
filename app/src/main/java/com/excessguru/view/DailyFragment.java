@@ -36,8 +36,8 @@ public class DailyFragment extends Fragment {
     private GridLayoutManager gridLayoutManager;
     DailyAdapter dailyAdapter;
     private ArrayList<InsuranceListItems> itemlist = new ArrayList<>();
-    private String[] items = {"Daily UK & Europe","Daily Worldwide(ex.CDW & SLI)","Daily Worldwide(ex.CDW & SLI)"};
-    private String[] price = {"1.99","4.99","7.99"};
+    private String[] items = {"Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)","Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)"};
+    private String[] price = {"1.99","4.99","7.99","1.99","4.99","7.99"};
     private ArrayList<DashBoardItems> arrayList;
 
     public static DailyFragment newInstance() {
