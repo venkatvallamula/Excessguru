@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                Objects.requireNonNull(getSupportActionBar()).hide();
+               // Objects.requireNonNull(getSupportActionBar()).hide();
             }
             changeFragment(DashBoardFragment.newInstance());
         }
