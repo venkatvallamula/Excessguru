@@ -7,29 +7,19 @@
     android:layout_height="60dp"
     android:background="@color/white"
     tools:context=".view.MainActivity">
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivHome"
-        android:layout_width="20dp"
-        android:layout_height="26dp"
-        android:src="@drawable/drawer"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:tint="#0254a6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="20dp" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivTitle"
         android:layout_width="200dp"
         android:layout_height="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:src="@drawable/excessguru_logo"
+        android:tint="#0254a6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivHome"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:tint="#0254a6"
         tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.AppCompatImageView
