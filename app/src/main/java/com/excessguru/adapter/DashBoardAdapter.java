@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.MyViewHolder> {
 
-    private List<DashBoardItems> moviesList;
+    private List<DashBoardItems> dashBoardItems;
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -31,7 +31,7 @@ public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.MyVi
         }
     }
     public DashBoardAdapter(Context context,List<DashBoardItems> moviesList) {
-        this.moviesList = moviesList;
+        this.dashBoardItems = moviesList;
         this.mContext = context;
     }
 
@@ -45,7 +45,7 @@ public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.MyVi
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        DashBoardItems items = moviesList.get(position);
+        DashBoardItems items = dashBoardItems.get(position);
         holder.title.setText(items.getInsuranceType());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +57,6 @@ public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.MyVi
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+        return dashBoardItems.size();
     }
 }

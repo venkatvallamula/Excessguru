@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder> {
 
-    private List<InsuranceListItems> moviesList;
+    private List<InsuranceListItems> insuranceListItems;
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -33,7 +33,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder
         }
     }
     public DailyAdapter(Context context, List<InsuranceListItems> moviesList) {
-        this.moviesList = moviesList;
+        this.insuranceListItems = moviesList;
         this.mContext = context;
     }
 
@@ -48,7 +48,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        InsuranceListItems items = moviesList.get(position);
+        InsuranceListItems items = insuranceListItems.get(position);
         holder.title.setText(items.getInsuranceType());
         holder.price.setText(mContext.getResources().getString(R.string.euroSymbol)+items.getPrice());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +61,6 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+        return insuranceListItems.size();
     }
 }

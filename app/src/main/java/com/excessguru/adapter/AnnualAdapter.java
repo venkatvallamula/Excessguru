@@ -19,7 +19,7 @@ import java.util.Objects;
 
 public class AnnualAdapter extends RecyclerView.Adapter<AnnualAdapter.MyViewHolder> {
 
-    private List<InsuranceListItems> moviesList;
+    private List<InsuranceListItems> insuranceListItems;
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -33,7 +33,7 @@ public class AnnualAdapter extends RecyclerView.Adapter<AnnualAdapter.MyViewHold
         }
     }
     public AnnualAdapter(Context context, List<InsuranceListItems> moviesList) {
-        this.moviesList = moviesList;
+        this.insuranceListItems = moviesList;
         this.mContext = context;
     }
 
@@ -47,7 +47,7 @@ public class AnnualAdapter extends RecyclerView.Adapter<AnnualAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        InsuranceListItems items = moviesList.get(position);
+        InsuranceListItems items = insuranceListItems.get(position);
         holder.title.setText(items.getInsuranceType());
         holder.price.setText(mContext.getResources().getString(R.string.euroSymbol)+items.getPrice());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +60,6 @@ public class AnnualAdapter extends RecyclerView.Adapter<AnnualAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+        return insuranceListItems.size();
     }
 }

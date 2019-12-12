@@ -1,4 +1,4 @@
-package com.excessguru.model;
+package com.excessguru.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

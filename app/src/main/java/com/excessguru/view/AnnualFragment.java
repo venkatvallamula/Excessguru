@@ -1,27 +1,23 @@
 package com.excessguru.view;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.excessguru.R;
 import com.excessguru.adapter.AnnualAdapter;
-import com.excessguru.adapter.DashBoardAdapter;
-import com.excessguru.model.DashBoardItems;
-import com.excessguru.model.DashBoardViewModel;
 import com.excessguru.model.InsuranceListItems;
+import com.excessguru.viewmodel.AnnualViewModel;
 
 import java.util.ArrayList;
 
@@ -33,12 +29,10 @@ public class AnnualFragment extends Fragment {
     private AnnualViewModel mViewModel;
     @BindView(R.id.dailyRecyclerView)
     RecyclerView recyclerView;
-    private GridLayoutManager gridLayoutManager;
     AnnualAdapter annualAdapter;
     private ArrayList<InsuranceListItems> itemlist = new ArrayList<>();
     private String[] items = {"Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)","Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)"};
     private String[] price = {"1.99","4.99","7.99","1.99","4.99","7.99"};
-    private ArrayList<InsuranceListItems> arrayList;
 
     public static AnnualFragment newInstance() {
         return new AnnualFragment();

@@ -18,9 +18,8 @@ import android.view.ViewGroup;
 
 import com.excessguru.R;
 import com.excessguru.adapter.DailyAdapter;
-import com.excessguru.adapter.DashBoardAdapter;
 import com.excessguru.model.DashBoardItems;
-import com.excessguru.model.DashBoardViewModel;
+import com.excessguru.viewmodel.DailyViewModel;
 import com.excessguru.model.InsuranceListItems;
 
 import java.util.ArrayList;
@@ -33,12 +32,10 @@ public class DailyFragment extends Fragment {
     private DailyViewModel mViewModel;
     @BindView(R.id.dailyRecyclerView)
     RecyclerView recyclerView;
-    private GridLayoutManager gridLayoutManager;
     DailyAdapter dailyAdapter;
     private ArrayList<InsuranceListItems> itemlist = new ArrayList<>();
     private String[] items = {"Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)","Daily UK & Europe","Daily Worldwide (ex.CDW & SLI)","Daily Worldwide (ex.CDW & SLI)"};
     private String[] price = {"1.99","4.99","7.99","1.99","4.99","7.99"};
-    private ArrayList<DashBoardItems> arrayList;
 
     public static DailyFragment newInstance() {
         return new DailyFragment();

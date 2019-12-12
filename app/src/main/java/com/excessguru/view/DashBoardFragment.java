@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.excessguru.R;
 import com.excessguru.adapter.DashBoardAdapter;
 import com.excessguru.model.DashBoardItems;
-import com.excessguru.model.DashBoardViewModel;
+import com.excessguru.viewmodel.DashBoardViewModel;
 
 import java.util.ArrayList;
 
@@ -29,7 +29,6 @@ public class DashBoardFragment extends Fragment {
     private DashBoardViewModel mViewModel;
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
-    private GridLayoutManager gridLayoutManager;
     DashBoardAdapter dashBoardAdapter;
     private ArrayList<DashBoardItems> itemlist = new ArrayList<>();
     private String[] items = {"CAR HIRE EXCESS INSURANCE","PRIVATE CAR HIRE EXCESS INSURANCE","VAN & CV EXCESS INSURANCE","CLAIMS",
@@ -52,7 +51,6 @@ public class DashBoardFragment extends Fragment {
         itemlist = proResult();
         dashBoardAdapter = new DashBoardAdapter(getActivity(),itemlist);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(dashBoardAdapter);
